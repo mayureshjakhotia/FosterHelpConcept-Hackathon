@@ -1,0 +1,27 @@
+<ion-view title="Helpdesk Chat" id="page6">
+  <ion-content padding="true" class="has-header">
+    <div class="list card" id="helpdeskChat-card24">
+      <ion-item class="item-avatar" id="helpdeskChat-list-item18">
+        <h2>Ronnie HelpDesk</h2>
+        <p>What can I help you with?</p>
+      </ion-item>
+    </div>
+    <form id="helpdeskChat-form1" class="list">
+      <label class="item item-input" id="helpdeskChat-input1">
+        <textarea ng-show="showDiv" rows="4" cols="50">{{value}}</textarea>
+      </label>
+        <br>
+      <label class="item item-input" id="helpdeskChat-input1">
+        <textarea ng-show="showDiv" rows="4" cols="50">{{response}}</textarea>
+
+      </label>
+    </form>
+  </ion-content>
+
+  <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
+      <label class="item-input-wrapper">
+        <input id="FirstName" type="text" placeholder="Type your question here..." ng-model="Info.FirstName" on-return="Next(Info.FirstName);showDiv=true; closeKeyboard()"/>
+      </label>
+      <button class="button button-clear" ng-click="Next(Info.FirstName);showDiv=true;"> Send </button>
+    </ion-footer-bar>
+</ion-view>
